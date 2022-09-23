@@ -15,7 +15,7 @@ if __name__ == "__main__":
     thresh = 0.7
 
     mp_holistic = mp.solutions.holistic
-    model = load_model('transformer', pretrained=True, training=False)
+    model = load_model('lstm_v3', pretrained=True, training=False)
     actions = os.listdir('greetings_data')
     cap = cv2.VideoCapture('Test_video.mp4')
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
