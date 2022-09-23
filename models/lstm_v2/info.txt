@@ -1,0 +1,34 @@
+Model Architecture:
+
+  model = Sequential()
+  model.add(LSTM(64, return_sequences=True, activation='relu', input_shape=(30, 150)))
+  model.add(LSTM(128, return_sequences=True, activation='relu'))
+  model.add(LSTM(128, return_sequences=True, activation='relu'))
+  model.add(LSTM(256, return_sequences=True, activation='relu'))
+  model.add(LSTM(256, return_sequences=False, activation='relu'))
+  
+  
+  model.add(Dense(512, activation='relu'))
+  model.add(Dense(256, activation='relu'))
+  model.add(Dense(128, activation='relu'))
+  model.add(Dense(64, activation='relu'))
+  model.add(Dense(len(actions), activation='softmax'))
+
+  adam = tf.keras.optimizers.Adam(3e-4)
+
+  model.compile(optimizer=adam, loss='categorical_crossentropy', metrics=['categorical_accuracy'])
+  model.summary()	  
+
+Best Loss/Accuracy :
+
+	loss: 0.3733 - categorical_accuracy: 0.9056 - val_loss: 0.4878 - val_categorical_accuracy: 0.9000 - lr: 3.0000e-13
+
+Dataset :
+
+	Trained with existing number of data without modifications
+
+To Improve :
+	
+	Augment data to include more examples of each class (flipping images for left hand - right hand recognition) (Done)
+	Increase Layers
+	Switch model architecture to bi-directional LSTMs.
