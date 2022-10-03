@@ -12,7 +12,7 @@ if __name__ == "__main__":
     predictions = []
     frame_count = 0
     res = None
-    thresh = 0.7
+    thresh = 0.85
 
     mp_holistic = mp.solutions.holistic
     model = load_model('lstm_v3', pretrained=True, training=False)
