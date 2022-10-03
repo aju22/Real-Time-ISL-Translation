@@ -1,0 +1,18 @@
+Architecture:
+
+ model = build_model(
+        input_shape=(30, 150),
+        output_shape=len(actions),
+        head_size=512,
+        num_heads=4,
+        ff_dim=4,
+        num_transformer_blocks=4,
+        mlp_units=[128],
+        dropout=0.1,
+        mlp_dropout=0.1,
+  )
+
+
+Best Loss/Accuracy:
+	
+	loss: 0.8273 - categorical_accuracy: 0.7175 - val_loss: 1.1730 - val_categorical_accuracy: 0.5000 - lr: 3.0000e-09
