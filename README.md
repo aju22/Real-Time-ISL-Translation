@@ -45,6 +45,8 @@ We have used a small subset of the dataset, namely [Greetings_1of2.zip](https://
 
 Since the training has been performed on a relatively small subset of the dataset, perfomance is not highly accurate. However with enough computational resources, it can be scaled to include entire training dataset, to produce credible results.
 
+## ***Sample Test***
+![](misc/sample.gif)
 
 
 
