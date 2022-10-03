@@ -11,3 +11,7 @@ with tf.device(device_name):
   model.add(Dense(128, activation='relu'))
   model.add(Dense(64, activation='relu'))
   model.add(Dense(len(actions), activation='softmax'))
+  
+  Best Loss/Accuracy:
+  
+      loss: 0.2769 - categorical_accuracy: 0.9153 - val_loss: 0.5876 - val_categorical_accuracy: 0.8000 - lr: 3.0000e-15
