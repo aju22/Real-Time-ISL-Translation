@@ -20,14 +20,4 @@ Model Architecture:
 
 Best Loss/Accuracy :
 
-	loss: 1.1668 - categorical_accuracy: 0.5167 - val_loss: 1.2514 - val_categorical_accuracy: 0.4000 - lr: 3.0000e-12
-
-Dataset :
-
-	Trained with existing number of data
-
-To Improve :
-	
-	Augment data to include more examples of each class (flipping images for left hand - right hand recognition)
-	Increase Layers
-	Switch model architecture to bi-directional LSTMs.
+	loss: 0.2991 - categorical_accuracy: 0.9733 - val_loss: 1.2514 - val_categorical_accuracy: 0.7500 - lr: 3.0000e-12
